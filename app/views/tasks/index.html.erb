@@ -1,0 +1,9 @@
+<div class="page">
+  <h1>My tasks</h1>
+  <ul class=todo_list>
+    <% @tasks.each do |i|%>
+    <li class=list_item><h3><%= link_to i.title, task_path(i) %></h3> <%= link_to "edit", edit_task_path(i) %></li>
+    <% end %>
+  </ul>
+  <%= link_to "Add new task", new_task_path, class:"new_task_btn"%>
+</div>
